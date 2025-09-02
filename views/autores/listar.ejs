@@ -6,13 +6,13 @@
   <title>Lista de Livros</title>
 </head>
 <body>
-  <h1>Lista de Livros</h1> 
-  <a href="/livros/criar">Criar Livro</a>
+  <h1>Lista de Autores</h1> 
+  <a href="/autores/criar">Criar Autor</a>
   <ul>
-    <% livros.forEach(livro => { %>
+    <% autores.forEach(autor => { %>
       <li>
-        <%= livro.titulo %> - <%= livro.autor.nome %> - <%= livro.ano %>
-          <a href="/livros/<%= livro.id %>/editar">Editar</a>
+        <%= autor.nome %> - <%= autor.genero %> - <%= autor.data_nascimento %>
+          <a href="/autores/<%= autor.id %>/editar">Editar</a>
         </li>
     <% }); %>
   </ul>

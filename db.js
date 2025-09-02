@@ -1,10 +1,8 @@
-const { default: axios } = require("axios");
+const { Sequelize } = require('sequelize');
 
-const DB = axios.create({
-  baseURL: "http://localhost:3001",
-  headers: {
-    "Content-Type": "application/json",
-  },
+const DB = new Sequelize({
+  dialect: 'sqlite',
+  storage: 'database.sqlite'
 });
 
 module.exports = DB;
